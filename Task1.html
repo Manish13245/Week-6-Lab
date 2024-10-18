@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Counter</title>
+  <style>
+    body {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 150px;
+  }
+  button {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  </style>
+</head>
+<body>
+  <h1>Button Counter</h1>
+  <p>Counter: <span id="counter">0</span></p>
+  <button id="incrementButton">Increment</button>
+
+  <script>
+    let counter = 0;
+    const button = document.getElementById('incrementButton');
+    const counterDisplay = document.getElementById('counter');
+
+    button.addEventListener('click', () => {
+      counter++;
+      counterDisplay.textContent = counter;
+    });
+  </script>
+</body>
+</html>
